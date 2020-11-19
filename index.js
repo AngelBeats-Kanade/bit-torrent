@@ -7,6 +7,7 @@ const download = require('./src/download');
 const torrentParser = require('./src/torrent-parser');
 const torrent = torrentParser.open('puppy.torrent');
 
+download(torrent);
 tracker.getPeers(torrent, peers => {
   console.log('list of peers: ', peers);
 });
